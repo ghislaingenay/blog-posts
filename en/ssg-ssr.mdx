@@ -22,7 +22,6 @@ You can use Static Generation for many types of pages, including:
 - Help and documentation
 
 ```ts
-<ClipboardCode className='9d166844-2c97-11ee-be56-0242ac120002'>
 export async function getStaticProps() {
   // Get external data from the file system, API, DB, etc.
   const data = ...
@@ -34,7 +33,6 @@ props: ...
 }
 }
 
-</ClipboardCode>
 ```
 
 You should ask yourself: "Can I pre-render this page **ahead** of a user's request?" If the answer is yes, then you should choose Static Generation.
