@@ -10,6 +10,7 @@ keywords:
   [
     "React useState",
     "React hooks",
+    "how to use useState in React",
     "useState tutorial",
     "useState hook example",
   ]
@@ -22,10 +23,10 @@ series: "TUTORIAL"
 
 ## What is useState in React?
 
-useState is a React hook that allows you to store and manage a piece of information (called "state") in functional components efficiently.
-It enables developers to store stateful values, such as variables, and re-render the component when those values change.
+useState is a React hook that allows you to store and manage efficiently a piece of information (called "state") in functional components.
+It enables to store stateful values, such as variables, and re-render the component when those values change.
 
-This hook can be directly imported from the React library and used in any functional component.
+This hook can be directly imported from the React framework and used in any functional component.
 
 <ClipboardCode>
 
@@ -37,13 +38,10 @@ import { useState } from "react";
 
 ##### To start using "useState," you need to tell React what you want to store which information. For example, if you want to keep track of a number, you can set it up like this:
 
+We can in initialize a state and set the default value to 5. Then, from this state, you can read this **"number"** value by simply using the **"number"** variable
+
 ```jsx
 const [number, setNumber] = useState(5);
-```
-
-Now that you have your number stored with the defaukt value of 5, you can read this **"number"** value by simply using the **"number"** variable
-
-```jsx
 console.log(number); // This will give you 5
 ```
 
@@ -63,15 +61,16 @@ console.log(number); // This will give you 10
 ## Counter example
 
 Let's take a look at a more practical example. We will create a simple counter that will increment or decrement by 1 or 5 every time we click on a button.
-You have the possibility to reset the counter to 0 by clicking on another button.
+You also have the possibility to reset the counter to 0 by clicking on another button.
 
 <CounterState />
 
-Now let's see how we can implement this counter system see above with code.
-Each step will add a new piece of code and explain what it does.
+Now, let's see how we can implement this counter system see above with code.
 
 <strong>
-  <ins>Disclamer</ins>: The styling wasn not implmented in the example below
+  <ins>Disclamer</ins>: The styling was not implemented in the example below.
+  FYI, I use simple [Tailwind CSS](https://tailwindcss.com/) classes to style
+  the counter.
 </strong>
 
 #### Step 1. Create a functional component called Counter
@@ -111,14 +110,7 @@ export const Counter = () => {
 
 #### Step 2. Add the logic to increment or decrement the count state
 
-For this step, we will need to add a onClick event on the buttons in order to interact with the counter by using **"setCount"**.
-
-<em>For example</em>
-
-```js
-<button onClick={() => setCount(() => count + 1)}>+1</button>
-```
-
+For this step, we will need to add a onClick event on each button in order to interact with the counter by using **"setCount"**.
 Here we are telling React to update the value of "count" by adding 1 to the current value of "count" every time we click on the button.
 
 ```jsx
@@ -158,7 +150,7 @@ import { useState } from "react";
 
 export const Counter = () => {
   const [count, setCount] = useState(0);
-  const addValueToCount = (value: number) => setCount(() => count + value);
+  const addValueToCount = (value) => setCount((prevValue) => prevValue + value); // prevValue is the previous value of count
   const reinitializeCount = () => setCount(0);
   return (
     <div>
@@ -176,4 +168,4 @@ export const Counter = () => {
 };
 ```
 
-Hopefully, this article helped you understand how to use useState in React. If you have any questions, feel free to reach out to me on github or LinkedIn.
+Hopefully, this article helped you understand how to use useState in React. If you have any questions, feel free to reach out to me on Github or LinkedIn via the links in my navbar.
