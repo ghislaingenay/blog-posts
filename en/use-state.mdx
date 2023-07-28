@@ -65,12 +65,14 @@ console.log(number); // This will give you 10
 Let's take a look at a more practical example. We will create a simple counter that will increment or decrement by 1 or 5 every time we click on a button.
 You have the possibility to reset the counter to 0 by clicking on another button.
 
-component here
+<CounterState />
 
 Now let's see how we can implement this counter system see above with code.
 Each step will add a new piece of code and explain what it does.
 
-~~Disclamer: The styling wasn not implmented in the example below~~
+<strong>
+  <ins>Disclamer</ins>: The styling wasn not implmented in the example below
+</strong>
 
 #### Step 1. Create a functional component called Counter
 
@@ -101,19 +103,19 @@ export const Counter = () => {
 };
 ```
 
-<ins>Main key points</ins>- This counter component contains a state called
-"count" and a function called "setCount" that will allow us to update the value
-of "count". - The "count" state is initialized with a default value of 0. - The
-"count" state is displayed on the screen inside the <ins>
-  <em>paragraph tag **p**</em>
-</ins> by using the **"count"** variable.
+<ins>Main key points</ins>
+
+- This counter component contains a state called "count" and a function called "setCount" that will allow us to update the value of "count".
+- The "count" state is initialized with a default value of 0.
+- The "count" state is displayed on the screen inside the <ins><em>paragraph tag **p**</em></ins> by using the **"count"** variable.
 
 #### Step 2. Add the logic to increment or decrement the count state
 
 For this step, we will need to add a onClick event on the buttons in order to interact with the counter by using **"setCount"**.
 
 <em>For example</em>
-```jsx
+
+```js
 <button onClick={() => setCount(() => count + 1)}>+1</button>
 ```
 
