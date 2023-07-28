@@ -104,9 +104,9 @@ export const Counter = () => {
 <ins>Main key points</ins>- This counter component contains a state called
 "count" and a function called "setCount" that will allow us to update the value
 of "count". - The "count" state is initialized with a default value of 0. - The
-"count" state is displayed on the screen inside the paragraph tag <code>
-  <p>'count' value</p>
-</code> by using the **"count"** variable.
+"count" state is displayed on the screen inside the <ins>
+  <em>paragraph tag **p**</em>
+</ins> by using the **"count"** variable.
 
 #### Step 2. Add the logic to increment or decrement the count state
 
@@ -114,7 +114,8 @@ For this step, we will need to add a onClick event on the buttons in order to in
 
 <em>For example</em>
 ```jsx
-<button onClick={() => setCount(() => count + 1)}>+1</button>; ```
+<button onClick={() => setCount(() => count + 1)}>+1</button>
+```
 
 Here we are telling React to update the value of "count" by adding 1 to the current value of "count" every time we click on the button.
 
